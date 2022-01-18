@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all ease 400ms;
+}
+:root{
+    --black: #1b1e23;
+    --white: #ffffff;
+}
+.dark{
+    --black: #ffffff;
+    --white: #1b1e23;
+}
+header{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100% !important;
+    padding: 40px 100px;
+    z-index: 8;
+}
+header .logo{
+    position: relative;
+    display: inline-flex;
+    color: var(--black);
+    text-decoration: none; 
+
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.rightSide{
+    display: flex;
+}
+.btns{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0px 0px 0px 10px;
+}
+.btns i{
+    font-size: 1.5em;
+    color: var(--black);
+}
+.btns i:nth-child(2){
+    display: none;
+}
+.btns.menuToggle i{
+    font-size: 2em;
+}
+.btns.active i:nth-child(2){
+    display: block;
+}
+.btns.active i:nth-child(1){
+    display: none;
+}
+
+main{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    user-select: none;
+    mix-blend-mode: screen;
+}
+.dark .mask{
+    filter: invert(1);
+    mix-blend-mode: multiply;
+}
+main h2{
+    position: relative;
+    z-index: 3;
+    font-size: 16vw;
+    color: #ffffff;
+    text-shadow: 0 20px 30px #00000033;
+}
+.copyrightText{
+    position: absolute;
+    left: 100px;
+    bottom: 40px;
+    z-index: 5;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--black);
+}
+.navigation{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--white);
+    z-index: 6;
+}
+.navigation.active{
+    left: 0;
+}
+.navigation li a{
+    display: inline-flex;
+    margin: 5px 0;
+    font-size: 1.25em;
+    text-decoration: none;
+    color: var(--black);
+    padding: 5px 20px;
+    border-radius: 2px;
+}
+.navigation li a:hover{
+    background-color: var(--black);
+    color: var(--white);
+}
+.sci{
+    position: absolute;
+    right: 100px;
+    bottom: 40px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+}
+.sci i{
+    font-size: 1.6em;
+    color: var(--black);
+    margin: 5px 0px;
+}
+
+@media (max-width: 600px) {
+    .contact-container{
+        width: 300px;
+    }
+    .sci{
+        bottom: 14px !important;
+        right: 8px !important;
+    }
+}
+@media (max-width: 768px) {
+    header{
+        padding: 20px;
+    }
+    .copyrightText{
+        left: 20px;
+        bottom: 16px;
+    }
+    .sci{
+        bottom: 12px;
+        right: 20px;
+    }
+    .package-container{
+        padding: 100px 20px !important;
+    }
+}
+
+
+
+/* == About == */
+.about{
+    background-color: var(--white);
+}
+.about-container{
+    height: fit-content;
+    width: 400px;
+    padding: 20px 10px;
+}
+.about-container h1, p{
+    color: var(--black);
+    text-align: left;
+    margin: 0px;
+}
+.about-container p:nth-child(2){
+    font-weight: 500;
+}
+.about-container p:nth-child(3){
+    margin: 10px 0px;
+}
+/* == || About == */
+
+
+/* == Package == */
+.package{
+    background-color: var(--white);
+}
+.package-container{
+    height: fit-content;
+    width: fit-content;
+    padding: 20px 10px;
+}
+.package-container h1, p{
+    color: var(--black);
+    text-align: left;
+    margin: 0px;
+}
+.pricing{
+    height: fit-content;
+    width: fit-content;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.price{
+    height: 320px;
+    width: 250px;
+    padding: 30px 20px 20px;
+    border-radius: 4px;
+    position: relative;
+    background-color: var(--black);
+    z-index: 0;
+}
+.price-package{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--white);
+}
+.best{
+    position: absolute;
+    top: 0;
+    margin: 0px 55px;
+    height: 25px;
+    width: 100px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+}
+.best span{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--black);
+}
+.price-text{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    margin: 12px 0px;
+}
+.pricing-price{
+    font-size: 26px;
+    font-weight: 700;
+}
+.pricing-specs li{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--white);
+    padding: 5px 0px;
+}
+.pricing-specs li i{
+    margin: 0px 10px 0px 0px;
+}
+.price:nth-child(2){
+    margin: 10px 10px;
+}
+.price button{
+    height: 40px;
+    width: 140px;
+    outline: none;
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--white);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--black);
+    position: absolute;
+    bottom: 10px;
+    margin: 0px 35px;
+}
+/* == || Package == */
+
+
+/* == Contact == */
+.contact{
+    background-color: var(--white);
+}
+.contact-container{
+    height: fit-content;
+    width: 400px;
+    padding: 10px 20px 30px;
+}
+.contact-container h1, p{
+    color: var(--black);
+    text-align: left;
+    margin: 0px;
+}
+form{
+    height: fit-content;
+    padding: 10px 0px 0px;
+}
+form label{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--black);
+}
+form input{
+    height: 32px;
+    width: 100%;
+    padding: 0px 10px;
+    outline: none;
+    border: 1px solid var(--black);
+    background-color: var(--black);
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--white);
+}
+form textarea{
+    height: 80px;
+    width: 100%;
+    padding: 10px 10px;
+    outline: none;
+    font-size: 14px;
+    color: var(--white);
+    background-color: var(--black);
+    border: 1px solid var(--black);
+    border-radius: 4px;
+}
+form button{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--black);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white);
+    margin: 10px 0px 0px;
+}
+
+/* == || Contact == */
