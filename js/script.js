@@ -13,3 +13,7 @@ menuToggle.onclick = function() {
     menuToggle.classList.toggle('active');
     navigation.classList.toggle('active');
 }
+
+function redirect() {
+    location.replace("404.html");
+}

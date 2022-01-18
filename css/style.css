@@ -14,6 +14,42 @@
     --black: #ffffff;
     --white: #1b1e23;
 }
+#message{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--white);
+}
+.error-head{
+    font-size: 180px;
+    font-weight: 600;
+    color: var(--black);
+    margin: 0px;
+}
+.error-text{
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--black);
+    margin: -50px 0px 0px;
+}
+#message a{
+    height: 40px;
+    width: 140px;
+    outline: none;
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--black);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 header{
     position: absolute;
     display: flex;
